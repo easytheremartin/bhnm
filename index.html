@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#10080e" />
+  <title>KARIMA AŞIĞIM ❤️</title>
+  <style>
+    @property --kenar-acisi {
+      syntax: '<angle>';
+      initial-value: 0deg;
+      inherits: false;
+    }
+
+    :root {
+      --gece: #10080e;
+      --bordo: #3a101f;
+      --pembe: #ff6b9d;
+      --acik-pembe: #ffd1df;
+      --altin: #d8ad83;
+      --soluk: #c8aeb8;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { min-height: 100%; background: var(--gece); }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 28px 18px;
+      overflow-x: hidden;
+      color: #fff4f7;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(ellipse at 50% 0%, rgba(113, 27, 59, .34), transparent 48%),
+        radial-gradient(ellipse at 8% 85%, rgba(87, 23, 49, .25), transparent 38%),
+        radial-gradient(ellipse at 95% 70%, rgba(94, 29, 54, .20), transparent 35%),
+        linear-gradient(145deg, #0b070b 0%, #180b13 48%, #0d080d 100%);
+    }
+
+    body::before,
+    body::after {
+      content: "";
+      position: fixed;
+      pointer-events: none;
+      z-index: 0;
+      border-radius: 50%;
+      filter: blur(90px);
+      opacity: .18;
+    }
+
+    body::before {
+      width: 340px; height: 340px;
+      left: -150px; top: 18%;
+      background: #a32658;
+      animation: leke1 19s ease-in-out infinite alternate;
+    }
+
+    body::after {
+      width: 390px; height: 390px;
+      right: -180px; bottom: 2%;
+      background: #6d1a43;
+      animation: leke2 23s ease-in-out infinite alternate;
+    }
+
+    .arka-leke {
+      position: fixed;
+      border-radius: 50%;
+      filter: blur(110px);
+      pointer-events: none;
+      z-index: 0;
+      opacity: .14;
+    }
+
+    .leke-1 {
+      width: 460px; height: 460px;
+      left: 12%; top: 62%;
+      background: #c23a6d;
+      animation: leke1 15s ease-in-out infinite alternate;
+    }
+
+    .leke-2 {
+      width: 380px; height: 380px;
+      right: 10%; top: 12%;
+      background: #7c2150;
+      animation: leke3 18s ease-in-out infinite alternate;
+    }
+
+    .leke-3 {
+      width: 300px; height: 300px;
+      left: 46%; bottom: -8%;
+      background: #d86a92;
+      animation: leke2 21s ease-in-out infinite alternate;
+    }
+
+    @keyframes leke1 {
+      0%   { transform: translate(0, 0) scale(1); opacity: .14; }
+      50%  { transform: translate(70px, -55px) scale(1.22); opacity: .2; }
+      100% { transform: translate(-45px, 40px) scale(.92); opacity: .11; }
+    }
+
+    @keyframes leke2 {
+      0%   { transform: translate(0, 0) scale(1.05); opacity: .13; }
+      50%  { transform: translate(-80px, 60px) scale(.85); opacity: .19; }
+      100% { transform: translate(55px, -45px) scale(1.18); opacity: .12; }
+    }
+
+    @keyframes leke3 {
+      0%   { transform: translate(0, 0) scale(.95); opacity: .15; }
+      50%  { transform: translate(50px, 70px) scale(1.25); opacity: .21; }
+      100% { transform: translate(-60px, -35px) scale(1); opacity: .12; }
+    }
+
+    .sayfa {
+      position: relative;
+      z-index: 1;
+      width: min(100%, 1060px);
+      min-height: min(900px, calc(100vh - 56px));
+      padding: clamp(22px, 4vw, 42px) clamp(18px, 5vw, 58px) 28px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 204, 222, .13);
+      border-radius: 30px;
+      background: linear-gradient(145deg, rgba(32, 15, 25, .88), rgba(15, 10, 16, .88));
+      box-shadow: 0 35px 100px rgba(0, 0, 0, .48), inset 0 1px 0 rgba(255,255,255,.045),
+                  0 0 60px rgba(255, 90, 150, .10);
+      isolation: isolate;
+      animation: kartNefes 7s ease-in-out infinite alternate;
+    }
+
+    @keyframes kartNefes {
+      0%   { box-shadow: 0 35px 100px rgba(0,0,0,.48), inset 0 1px 0 rgba(255,255,255,.045), 0 0 45px rgba(255,90,150,.07); }
+      100% { box-shadow: 0 35px 100px rgba(0,0,0,.48), inset 0 1px 0 rgba(255,255,255,.045), 0 0 90px rgba(255,110,165,.18); }
+    }
+
+    /* Kartın kenarında dolaşan ışık huzmesi */
+    .sayfa::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      padding: 2px;
+      pointer-events: none;
+      z-index: -1;
+      background: conic-gradient(
+        from var(--kenar-acisi),
+        transparent 0deg,
+        rgba(255, 140, 180, 0) 30deg,
+        rgba(255, 140, 180, .95) 58deg,
+        #ffe0ec 72deg,
+        rgba(255, 140, 180, .95) 86deg,
+        rgba(255, 140, 180, 0) 116deg,
+        transparent 140deg,
+        transparent 360deg
+      );
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      mask-composite: exclude;
+      animation: kenarDon 8s linear infinite;
+    }
+
+    @keyframes kenarDon {
+      to { --kenar-acisi: 360deg; }
+    }
+
+    .sayfa::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      opacity: .18;
+      pointer-events: none;
+      background-image: radial-gradient(rgba(255, 225, 235, .5) .55px, transparent .7px);
+      background-size: 5px 5px;
+      mask-image: linear-gradient(to bottom, black, transparent 75%);
+    }
+
+    .ust-satir {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      color: #c9aeba;
+      font-size: 10px;
+      font-weight: 650;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+    }
+
+    .imza {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .imza-nokta {
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: var(--pembe);
+      box-shadow: 0 0 14px var(--pembe), 0 0 28px rgba(255, 107, 157, .55);
+      animation: noktaNabiz 2.2s ease-in-out infinite;
+    }
+
+    @keyframes noktaNabiz {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50%      { transform: scale(1.5); opacity: .65; }
+    }
+
+    .ust-sag { color: rgba(255, 209, 223, .62); }
+
+    .baslik-alani {
+      text-align: center;
+      margin: clamp(30px, 5vh, 48px) auto 4px;
+      max-width: 720px;
+    }
+
+    .ust-etiket {
+      margin: 0 0 14px;
+      color: var(--altin);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .38em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+      font-size: clamp(38px, 7vw, 76px);
+      line-height: .98;
+      font-weight: 500;
+      letter-spacing: .025em;
+      text-shadow: 0 0 35px rgba(255, 100, 152, .16);
+    }
+
+    h1 span {
+      color: var(--acik-pembe);
+      font-style: italic;
+      text-shadow: 0 0 24px rgba(255, 107, 157, .32);
+    }
+
+    .alt-baslik {
+      margin: 17px auto 0;
+      max-width: 520px;
+      color: #cdb7c0;
+      font-family: "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+      font-size: clamp(14px, 1.8vw, 17px);
+      line-height: 1.7;
+      letter-spacing: .025em;
+    }
+
+    .kalp-alani {
+      position: relative;
+      width: 100%;
+      height: clamp(340px, 51vh, 520px);
+      margin: 5px auto 0;
+    }
+
+    canvas {
+      display: block;
+      width: 100%;
+      height: 100%;
+      outline: none;
+    }
+
+    .alt-alan {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+      text-align: center;
+      margin-top: -4px;
+    }
+
+    .soz {
+      margin: 0;
+      color: #f4dce5;
+      font-family: "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+      font-size: clamp(17px, 2.2vw, 22px);
+      font-style: italic;
+      letter-spacing: .015em;
+    }
+
+    .ince-cizgi {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: rgba(216, 173, 131, .8);
+      font-size: 9px;
+      letter-spacing: .3em;
+      font-weight: 700;
+    }
+
+    .ince-cizgi::before,
+    .ince-cizgi::after {
+      content: "";
+      width: clamp(26px, 7vw, 70px);
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(216,173,131,.65));
+    }
+
+    .ince-cizgi::after { transform: rotate(180deg); }
+
+    .yenile {
+      appearance: none;
+      border: 1px solid rgba(255, 179, 204, .31);
+      border-radius: 999px;
+      padding: 12px 21px;
+      color: #ffe6ee;
+      background: linear-gradient(120deg, rgba(126, 34, 69, .42), rgba(62, 21, 42, .55));
+      font: inherit;
+      font-size: 10px;
+      font-weight: 750;
+      letter-spacing: .16em;
+      cursor: pointer;
+      transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease, background .25s ease;
+      box-shadow: 0 7px 25px rgba(0,0,0,.18), inset 0 1px 0 rgba(255,255,255,.07);
+    }
+
+    .yenile:hover {
+      transform: translateY(-2px);
+      border-color: rgba(255, 179, 204, .72);
+      box-shadow: 0 9px 30px rgba(188, 48, 99, .18), inset 0 1px 0 rgba(255,255,255,.1);
+      background: linear-gradient(120deg, rgba(150, 42, 82, .55), rgba(78, 25, 51, .68));
+    }
+
+    .yenile:active { transform: translateY(0) scale(.98); }
+    .yenile:focus-visible { outline: 2px solid var(--acik-pembe); outline-offset: 4px; }
+
+    .alt-imza {
+      margin: 23px 0 0;
+      text-align: center;
+      color: rgba(205, 177, 190, .48);
+      font-size: 9px;
+      font-weight: 650;
+      letter-spacing: .26em;
+    }
+
+    /* Şifre kapısı */
+    .kapi {
+      position: fixed;
+      inset: 0;
+      z-index: 60;
+      display: grid;
+      place-items: center;
+      padding: 20px;
+      background:
+        radial-gradient(ellipse at 50% 0%, rgba(113, 27, 59, .55), transparent 55%),
+        linear-gradient(145deg, #0b070b 0%, #180b13 55%, #0d080d 100%);
+      backdrop-filter: blur(14px);
+      transition: opacity .7s ease, visibility .7s;
+    }
+
+    .kapi.gizli {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    .kapi-kart {
+      width: min(100%, 380px);
+      padding: 38px 30px 32px;
+      text-align: center;
+      border: 1px solid rgba(255, 204, 222, .16);
+      border-radius: 24px;
+      background: linear-gradient(145deg, rgba(38, 17, 29, .92), rgba(18, 11, 18, .92));
+      box-shadow: 0 30px 80px rgba(0, 0, 0, .5), 0 0 50px rgba(255, 90, 150, .08);
+    }
+
+    .kapi-kalp {
+      font-size: 30px;
+      color: var(--pembe);
+      text-shadow: 0 0 22px rgba(255, 107, 157, .6);
+      animation: kapiKucukleme 2.4s ease-in-out infinite;
+    }
+
+    @keyframes kapiKucukleme {
+      0%, 100% { transform: scale(1); }
+      50%      { transform: scale(1.14); }
+    }
+
+    .kapi-baslik {
+      margin: 14px 0 6px;
+      font-family: "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+      font-size: 24px;
+      color: #ffe6ee;
+      letter-spacing: .04em;
+    }
+
+    .kapi-alt {
+      margin: 0 0 22px;
+      color: #c8aeb8;
+      font-size: 12px;
+      letter-spacing: .12em;
+    }
+
+    .kapi-form { display: flex; flex-direction: column; gap: 12px; }
+
+    .kapi-giris {
+      width: 100%;
+      padding: 13px 16px;
+      border: 1px solid rgba(255, 179, 204, .28);
+      border-radius: 999px;
+      background: rgba(0, 0, 0, .28);
+      color: #fff4f7;
+      font: inherit;
+      font-size: 14px;
+      text-align: center;
+      letter-spacing: .2em;
+      outline: none;
+      transition: border-color .25s ease, box-shadow .25s ease;
+    }
+
+    .kapi-giris:focus {
+      border-color: rgba(255, 179, 204, .75);
+      box-shadow: 0 0 0 3px rgba(255, 107, 157, .15);
+    }
+
+    .kapi-buton {
+      appearance: none;
+      border: 1px solid rgba(255, 179, 204, .35);
+      border-radius: 999px;
+      padding: 12px 20px;
+      color: #ffe6ee;
+      background: linear-gradient(120deg, rgba(126, 34, 69, .5), rgba(62, 21, 42, .6));
+      font: inherit;
+      font-size: 11px;
+      font-weight: 750;
+      letter-spacing: .18em;
+      cursor: pointer;
+      transition: transform .2s ease, border-color .2s ease, background .2s ease;
+    }
+
+    .kapi-buton:hover {
+      transform: translateY(-1px);
+      border-color: rgba(255, 179, 204, .7);
+      background: linear-gradient(120deg, rgba(150, 42, 82, .6), rgba(78, 25, 51, .7));
+    }
+
+    .kapi-hata {
+      min-height: 16px;
+      margin: 4px 0 0;
+      color: #ff8fae;
+      font-size: 11px;
+      letter-spacing: .1em;
+      opacity: 0;
+      transition: opacity .25s ease;
+    }
+
+    .kapi-hata.goster { opacity: 1; }
+
+    .kapi-kart.sallan { animation: kapiSalla .45s ease; }
+
+    @keyframes kapiSalla {
+      0%, 100% { transform: translateX(0); }
+      20% { transform: translateX(-9px); }
+      40% { transform: translateX(8px); }
+      60% { transform: translateX(-6px); }
+      80% { transform: translateX(4px); }
+    }
+
+    @media (max-width: 600px) {
+      body { padding: 10px; }
+      .sayfa {
+        min-height: calc(100svh - 20px);
+        padding: 22px 16px 22px;
+        border-radius: 23px;
+      }
+      .ust-satir { font-size: 8px; letter-spacing: .15em; }
+      .baslik-alani { margin-top: 38px; }
+      .kalp-alani { height: clamp(300px, 43vh, 410px); margin-top: 18px; }
+      .alt-alan { margin-top: 0; }
+      .alt-imza { margin-top: 20px; font-size: 8px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="kapi" id="kapi" role="dialog" aria-modal="true" aria-label="Şifre ekranı">
+    <div class="kapi-kart" id="kapiKart">
+      <div class="kapi-kalp" aria-hidden="true">♥</div>
+      <h2 class="kapi-baslik">Sana Özel Bir Şey Var</h2>
+      <p class="kapi-alt">DEVAM ETMEK İÇİN ŞİFREYİ GİR</p>
+      <form class="kapi-form" id="kapiForm" autocomplete="off">
+        <input class="kapi-giris" id="kapiSifre" type="password" placeholder="••••••••••" aria-label="Şifre" />
+        <button class="kapi-buton" type="submit">AÇ ♥</button>
+      </form>
+      <p class="kapi-hata" id="kapiHata">Şifre yanlış, tekrar dene</p>
+    </div>
+  </div>
+
+  <div class="arka-leke leke-1" aria-hidden="true"></div>
+  <div class="arka-leke leke-2" aria-hidden="true"></div>
+  <div class="arka-leke leke-3" aria-hidden="true"></div>
+
+  <main class="sayfa">
+    <div class="ust-satir">
+      <div class="imza"><span class="imza-nokta"></span><span>Bir ömürlük hikâye</span></div>
+      <div class="ust-sag">Sonsuza kadar <span aria-hidden="true">♥</span></div>
+    </div>
+
+    <header class="baslik-alani">
+      <p class="ust-etiket">Kalbimin en güzel yeri</p>
+      <h1>KARIMA <span>AŞIĞIM</span></h1>
+      <p class="alt-baslik">Bazı duygular kelimelere sığmaz. Ben yine de her satırda seni seçiyorum.</p>
+    </header>
+
+    <section class="kalp-alani" aria-label="Seni seviyorum yazılarından oluşan ışıklı kalp ve ortasında büyük B kalp N harfleri">
+      <canvas id="kalpTuvali" role="img" aria-label="Seni seviyorum sözleriyle oluşan, ortasında B kalp N yazan ışıklı kalp."></canvas>
+    </section>
+
+    <section class="alt-alan">
+      <p class="soz">“Sen, kalbimin en güzel bildiği yerdesin.”</p>
+      <div class="ince-cizgi">HER ZAMAN · HER YERDE · SENİNLE</div>
+      <button class="yenile" id="yenidenBaslat" type="button">♥ &nbsp; KALBİMİ YENİDEN GÖR</button>
+    </section>
+
+    <p class="alt-imza">BÜTÜN GÜZEL YARINLARIMIN SEBEBİSİN</p>
+  </main>
+
+  <script>
+    (() => {
+      const tuval = document.getElementById('kalpTuvali');
+      const ctx = tuval.getContext('2d');
+      const yenidenBaslat = document.getElementById('yenidenBaslat');
+      const hareketAzalt = false;
+
+      let genislik = 0;
+      let yukseklik = 0;
+      let pikselOrani = 1;
+      let baslangicZamani = performance.now();
+      let isaretci = { x: -1000, y: -1000 };
+      let yildizlar = [];
+      let animasyonKaresi;
+
+      const sinirla = (deger, alt, ust) => Math.max(alt, Math.min(ust, deger));
+      const yumusat = (t) => 1 - Math.pow(1 - t, 3);
+
+      function boyutlandir() {
+        const alan = tuval.getBoundingClientRect();
+        genislik = alan.width;
+        yukseklik = alan.height;
+        pikselOrani = Math.min(window.devicePixelRatio || 1, 2);
+        tuval.width = Math.round(genislik * pikselOrani);
+        tuval.height = Math.round(yukseklik * pikselOrani);
+        ctx.setTransform(pikselOrani, 0, 0, pikselOrani, 0, 0);
+
+        yildizlar = Array.from({ length: Math.round((genislik * yukseklik) / 6500) }, () => ({
+          x: Math.random() * genislik,
+          y: Math.random() * yukseklik,
+          boyut: Math.random() * 1.5 + .35,
+          hiz: Math.random() * 1.1 + .25,
+          faz: Math.random() * Math.PI * 2,
+          renk: Math.random() > .72 ? '255, 170, 198' : '255, 225, 235'
+        }));
+      }
+
+      function kalpYolu(merkezX, merkezY, kalpGenisligi, kalpYuksekligi) {
+        const yol = new Path2D();
+        yol.moveTo(merkezX, merkezY + kalpYuksekligi * .47);
+        yol.bezierCurveTo(
+          merkezX - kalpGenisligi * .56, merkezY + kalpYuksekligi * .12,
+          merkezX - kalpGenisligi * .55, merkezY - kalpYuksekligi * .43,
+          merkezX, merkezY - kalpYuksekligi * .15
+        );
+        yol.bezierCurveTo(
+          merkezX + kalpGenisligi * .55, merkezY - kalpYuksekligi * .43,
+          merkezX + kalpGenisligi * .56, merkezY + kalpYuksekligi * .12,
+          merkezX, merkezY + kalpYuksekligi * .47
+        );
+        yol.closePath();
+        return yol;
+      }
+
+      function yildizlariCiz(zaman) {
+        yildizlar.forEach((yildiz) => {
+          const titresim = hareketAzalt ? .65 : .35 + (Math.sin(zaman * .001 * yildiz.hiz + yildiz.faz) + 1) * .32;
+          ctx.beginPath();
+          ctx.arc(yildiz.x, yildiz.y, yildiz.boyut, 0, Math.PI * 2);
+          ctx.fillStyle = `rgba(${yildiz.renk}, ${titresim})`;
+          ctx.fill();
+        });
+      }
+
+      function kalbiCiz(zaman, ilerleme) {
+        const kalpYuksekligi = Math.min(yukseklik * .82, genislik * .66);
+        const kalpGenisligi = kalpYuksekligi * 1.12;
+        const merkezX = genislik / 2;
+        const merkezY = yukseklik * .49;
+        const yol = kalpYolu(merkezX, merkezY, kalpGenisligi, kalpYuksekligi);
+        const nabiz = hareketAzalt ? 1 : 1 + Math.sin(zaman * .0018) * .012;
+
+        ctx.save();
+        ctx.translate(merkezX, merkezY);
+        ctx.scale(nabiz, nabiz);
+        ctx.translate(-merkezX, -merkezY);
+
+        // Kalbin arkasındaki yumuşak ışık halesi.
+        const hale = ctx.createRadialGradient(merkezX, merkezY, 10, merkezX, merkezY, kalpGenisligi * .7);
+        hale.addColorStop(0, 'rgba(255, 75, 137, .17)');
+        hale.addColorStop(.55, 'rgba(155, 31, 77, .09)');
+        hale.addColorStop(1, 'rgba(80, 15, 43, 0)');
+        ctx.fillStyle = hale;
+        ctx.fillRect(0, 0, genislik, yukseklik);
+
+        // Yazıları kalp siluetinin içinde tut.
+        ctx.save();
+        ctx.clip(yol);
+        const acilisSiniri = merkezY - kalpYuksekligi * .51 + kalpYuksekligi * 1.08 * ilerleme;
+        ctx.beginPath();
+        ctx.rect(0, 0, genislik, acilisSiniri);
+        ctx.clip();
+
+        const yaziBoyutu = sinirla(genislik * .012, 7.2, 10.5);
+        const satirAraligi = sinirla(kalpYuksekligi * .043, 13, 19);
+        const tekrar = 'SENİ SEVİYORUM     ·     SENİ SEVİYORUM     ·     ';
+        const yazi = tekrar.repeat(8);
+        const yaziRengi = ctx.createLinearGradient(merkezX - kalpGenisligi / 2, 0, merkezX + kalpGenisligi / 2, 0);
+        yaziRengi.addColorStop(0, 'rgba(255, 134, 174, .92)');
+        yaziRengi.addColorStop(.5, 'rgba(255, 224, 234, .98)');
+        yaziRengi.addColorStop(1, 'rgba(255, 113, 160, .92)');
+        ctx.fillStyle = yaziRengi;
+        ctx.font = `650 ${yaziBoyutu}px Arial, sans-serif`;
+        ctx.textBaseline = 'middle';
+        ctx.shadowColor = 'rgba(255, 79, 139, .55)';
+        ctx.shadowBlur = 8;
+
+        let satir = 0;
+        for (let y = merkezY - kalpYuksekligi * .36; y <= merkezY + kalpYuksekligi * .34; y += satirAraligi) {
+          const kayma = satir % 2 === 0 ? 0 : -24;
+          ctx.fillText(yazi, merkezX - kalpGenisligi * .62 + kayma, y);
+          satir++;
+        }
+        ctx.restore();
+
+        // Kalbin dış çizgisi: önce ince bir ışık, sonra belirgin pembe hat.
+        const disParlaklik = .6 + (Math.sin(zaman * .002) + 1) * .16;
+        ctx.lineWidth = 5;
+        ctx.strokeStyle = `rgba(255, 75, 139, ${.12 * ilerleme})`;
+        ctx.shadowColor = 'rgba(255, 66, 135, .95)';
+        ctx.shadowBlur = 25;
+        ctx.stroke(yol);
+
+        ctx.lineWidth = 1.55;
+        ctx.strokeStyle = `rgba(255, 194, 214, ${disParlaklik * ilerleme})`;
+        ctx.shadowBlur = 12;
+        ctx.stroke(yol);
+
+        // Kalbin merkezinde büyük ve belirgin B ♥ N monogramı.
+        if (ilerleme > .48) {
+          const metinOpakligi = sinirla((ilerleme - .48) / .28, 0, 1);
+          ctx.save();
+          ctx.globalAlpha = metinOpakligi;
+          ctx.textBaseline = 'middle';
+
+          const monogramBoyutu = sinirla(genislik * .145, 48, 104);
+          const harfBoyutu = monogramBoyutu;
+          const kalpBoyutu = monogramBoyutu * .92;
+          const aralik = monogramBoyutu * .19;
+
+          ctx.font = `600 ${harfBoyutu}px Georgia, serif`;
+          const bGenislik = ctx.measureText('B').width;
+          const nGenislik = ctx.measureText('N').width;
+          ctx.font = `normal ${kalpBoyutu}px Georgia, serif`;
+          const simgeGenislik = ctx.measureText('♥').width;
+          const toplamGenislik = bGenislik + simgeGenislik + nGenislik + aralik * 2;
+          let x = merkezX - toplamGenislik / 2;
+          const y = merkezY + kalpYuksekligi * .005;
+
+          // B harfi: sıcak, fildişi tonlarında.
+          ctx.font = `600 ${harfBoyutu}px Georgia, serif`;
+          ctx.textAlign = 'left';
+          ctx.fillStyle = '#fff0f5';
+          ctx.shadowColor = 'rgba(255, 195, 216, .8)';
+          ctx.shadowBlur = 22;
+          ctx.fillText('B', x, y);
+          x += bGenislik + aralik;
+
+          // Ortadaki kalp: parlak pembe ve nabız gibi canlı.
+          ctx.font = `normal ${kalpBoyutu}px Georgia, serif`;
+          ctx.fillStyle = '#ff5f98';
+          ctx.shadowColor = 'rgba(255, 55, 127, 1)';
+          ctx.shadowBlur = 30;
+          ctx.fillText('♥', x, y + monogramBoyutu * .015);
+          x += simgeGenislik + aralik;
+
+          // N harfi: B harfiyle aynı ağırlıkta.
+          ctx.font = `600 ${harfBoyutu}px Georgia, serif`;
+          ctx.fillStyle = '#fff0f5';
+          ctx.shadowColor = 'rgba(255, 195, 216, .8)';
+          ctx.shadowBlur = 22;
+          ctx.fillText('N', x, y);
+          ctx.restore();
+        }
+
+        ctx.restore();
+      }
+
+      function isaretciIsigi() {
+        if (isaretci.x < 0) return;
+        const isik = ctx.createRadialGradient(isaretci.x, isaretci.y, 0, isaretci.x, isaretci.y, 115);
+        isik.addColorStop(0, 'rgba(255, 125, 169, .09)');
+        isik.addColorStop(1, 'rgba(255, 125, 169, 0)');
+        ctx.fillStyle = isik;
+        ctx.fillRect(isaretci.x - 115, isaretci.y - 115, 230, 230);
+      }
+
+      function ciz(zaman) {
+        ctx.clearRect(0, 0, genislik, yukseklik);
+        yildizlariCiz(zaman);
+        isaretciIsigi();
+
+        const gecenSure = zaman - baslangicZamani;
+        const ilerleme = hareketAzalt ? 1 : yumusat(sinirla(gecenSure / 3100, 0, 1));
+        kalbiCiz(zaman, ilerleme);
+        animasyonKaresi = requestAnimationFrame(ciz);
+      }
+
+      tuval.addEventListener('pointermove', (olay) => {
+        const sinir = tuval.getBoundingClientRect();
+        isaretci.x = olay.clientX - sinir.left;
+        isaretci.y = olay.clientY - sinir.top;
+      });
+
+      tuval.addEventListener('pointerleave', () => {
+        isaretci.x = -1000;
+        isaretci.y = -1000;
+      });
+
+      yenidenBaslat.addEventListener('click', () => {
+        baslangicZamani = performance.now();
+      });
+
+      window.addEventListener('resize', boyutlandir);
+      boyutlandir();
+      cancelAnimationFrame(animasyonKaresi);
+      animasyonKaresi = requestAnimationFrame(ciz);
+    })();
+  </script>
+
+  <script>
+    (() => {
+      const kapi = document.getElementById('kapi');
+      const kapiKart = document.getElementById('kapiKart');
+      const kapiForm = document.getElementById('kapiForm');
+      const kapiSifre = document.getElementById('kapiSifre');
+      const kapiHata = document.getElementById('kapiHata');
+      const DOGRU_SIFRE = '16.07.2026';
+
+      function kapiyiAc() {
+        kapi.classList.add('gizli');
+        try { sessionStorage.setItem('kalp_kapi', '1'); } catch (e) {}
+        setTimeout(() => kapi.remove(), 800);
+      }
+
+      try {
+        if (sessionStorage.getItem('kalp_kapi') === '1') kapiyiAc();
+      } catch (e) {}
+
+      kapiForm.addEventListener('submit', (olay) => {
+        olay.preventDefault();
+        if (kapiSifre.value.trim() === DOGRU_SIFRE) {
+          kapiyiAc();
+          return;
+        }
+        kapiHata.classList.add('goster');
+        kapiKart.classList.remove('sallan');
+        void kapiKart.offsetWidth;
+        kapiKart.classList.add('sallan');
+        kapiSifre.select();
+      });
+
+      setTimeout(() => kapiSifre.focus(), 300);
+    })();
+  </script>
+</body>
+</html>
